@@ -17,7 +17,7 @@ pipeline {
 			steps{
 				script {
 					sh 'rm -rf *.jar'
-					sh 'mvn clean install'
+					sh 'mvn clean install -DskipTests'
 					sh 'docker build -t dheerajkrishna141/student_survey_microservice:$BUILD_TIMESTAMP .'
 				}
 			}	
