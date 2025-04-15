@@ -15,7 +15,8 @@ pipeline {
 	stages {
 		stage("Building the Student Survey Microservice Image") {
 			steps{
-				script {
+				echo 'Building the application..'
+				 dir('/var/lib/jenkins/workspace/microservice_pipeline/studentSurveyMicroservice'){
 					sh 'rm -rf *.jar'
 					sh 'mvn clean install -DskipTests'
 					sh 'docker build -t dheerajkrishna141/student_survey_microservice:$BUILD_TIMESTAMP .'
