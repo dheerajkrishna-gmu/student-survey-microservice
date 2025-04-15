@@ -35,7 +35,7 @@ pipeline {
 		stage("Pushing Image to DockerHub") {
 			steps {
 				script {
-					sh 'docker push dheerajkrishna141/student-survey-microservice:$BUILD_TIMESTAMP'
+					sh 'docker push dheerajkrishna141/student-survey-microservice:latest'
 					}
 				}
 			}
