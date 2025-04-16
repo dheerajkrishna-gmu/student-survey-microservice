@@ -19,7 +19,7 @@ pipeline {
 				 dir('/var/lib/jenkins/workspace/microservice_pipeline/studentSurveyMicroservice'){
 					sh 'rm -rf *.jar'
 					sh 'mvn clean install -DskipTests'
-					sh 'docker build -t dheerajkrishna141/student_survey_microservice:$BUILD_TIMESTAMP .'
+					sh 'docker build -t dheerajkrishna141/student-survey-microservice:$BUILD_TIMESTAMP .'
 				}
 			}	
 		}
